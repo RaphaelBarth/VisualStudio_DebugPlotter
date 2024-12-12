@@ -1,16 +1,8 @@
 
-from queue import Empty, Queue
-import random
-import re
-from threading import Thread
-import time
-
+from queue import Empty
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
-from matplotlib import gridspec
-import numpy as np
 from dataSet import DataSet
-from dataCollector import DataCollector
 
 
 class Plotter:
@@ -26,7 +18,7 @@ class Plotter:
          ax.set_title(name)
          #ax.set_xlabel('X-axis')
          #ax.set_ylabel('Y-axis')
-         line, = ax.plot(dataset.X(),dataset.Y())
+         line, = ax.plot(dataset.X(),dataset.Y(),marker='o')
          self._intern_data[name]=(dataset,ax,line)
 
 
