@@ -19,7 +19,9 @@ class DataCollector():
     def collect(self,queue,wait):
         ''''''
         self._thread_stop.clear()
-        self._thread = Thread(target=self._run_DataCollector, args=(queue,0.001))
+        self.check_logfile()
+        self.clear_logfile()
+        self._thread = Thread(target=self._run_DataCollector, args=(queue,wait))
         self._thread.start()
 
 
@@ -29,12 +31,30 @@ class DataCollector():
         self._thread.join()
 
 
+    def clear_logfile(self):
+        '''
+        clear the data in the log file
+        '''
+        open(self.PATH ,'w')
+
+
+    def check_logfile(self):
+        '''
+        check if there is a valid filepath to the logfile
+        '''
+        if not self.PATH:
+            raise Exception("not path to logfilepath is set")
+        #check if file exists
+        open(self.PATH ,'w')
+
+
+        
+
+
     def _run_DataCollector(self,queue,wait):
         '''
         '''
         #print('_run_DataCollector')
-        if not self.PATH:
-            raise Exception("not path to logfilepath is set")
         file_pos = 0
         while not self._thread_stop.is_set():  
             with open(self.PATH, 'r',encoding="utf-16") as log_file:
