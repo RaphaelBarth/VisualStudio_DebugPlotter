@@ -2,12 +2,14 @@
 Python script for graphical plotting of VS debug messages
 
 ### 0. create Debug Messages:
-Insert breakpoints where you want to analyze your code. Adjust your breakpoints via settings, then Select the options *Actions* and *Continue code execution*. In the message, use the following style to indicate the key and value pair of your parameter
+Insert breakpoints where you want to analyze your code. Adjust your breakpoints via settings, then Select the options *Actions* and *Continue code execution*. 
+This type of breakpoint is also known as the feature tracepoint.
+In the message, use the following style to indicate the key and value pair of your parameter
 
 ```
 parameter={parameter}
 ```
-Be aware that printing debugs in this manner can significantly reduce the performance of the executed program, so use breakpoints carefully.
+Be aware that printing debugs in this manner can significantly reduce the performance of the executed program, so use breakpoints/tracepoints carefully.
 
 ### 1. redirect Visual Studio Output Window to file:
 
