@@ -37,3 +37,6 @@ Be aware that printing debugs in this manner can significantly reduce the perfor
 2. Configure the number of values displayed in a plot and the update frequency.
 3. Set the parameter names that you wish to plot, ensuring that they are named the same as in your key-value pairs.
 4. Launch the script by running main.py.
+
+
+Note that there is no temporal connection between the different plots. To solve this, you need to place your debugs correctly and smartly in the code.
