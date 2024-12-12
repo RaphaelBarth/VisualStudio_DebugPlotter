@@ -1,5 +1,5 @@
-# VS_DebugPlotter
-Python script for graphical plotting of VS debug messages
+# VisualStudio_DebugPlotter
+Python script for graphical plotting of VisualStudio debug messages
 
 ### 0. create Debug Messages:
 Insert breakpoints where you want to analyze your code. Adjust your breakpoints via settings, then Select the options *Actions* and *Continue code execution*. 
